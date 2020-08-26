@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Blue Slip</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="CSS/main.css">
+  <script src="mainjs.js"></script>
+
+
+<body>
+  <div class="shadow-lg p-3 bg-white rounded container" id="main">
+   <nav class="navbar navbar-light bg-light" id="header">
+
+    <img src="CSS/images/11.png" id="logo">
+    <h5>ASIA PACIFIC COLLEGE </h5>
+
+    <img src="CSS/images/12.png" id="logo" >
+
+  </nav>
+
+
+  <p >NOTICE TO THE OFFICER IN-CHARGE</p>
+  <ol style="margin-top: -20px;">
+    <li>The purpose of this notice is to document the student's violation.</li>
+    <li>The student can appeal the violation notice with the D.O within 48 hourss upon issuance, failure to
+    do so, would mean acceptance of liability.</li>
+    <li>Please confirm the information above.</li>
+  </ol>
+
+  <hr>
+
+  <form action="violation.php" method="POST">
+    <div class="form-row" id="inputs">
+      <!-- first column -->
+      <div class="col form-group" style="border-right: 2px dotted gray">
+        <h6>STUDENT INFORMATION</h6>
+        <br>
+        <input id="studin1" name="id" type="text" class="form-control input-lg" placeholder="Student Number" required>
+        <input id="studin2" name="fname" type="text" class="form-control" placeholder="First name" required>
+        <input id="studin3" name="lname" type="text" class="form-control" placeholder="Last name" required>
+        <input id="studin4" name="course" type="text" class="form-control" placeholder="Course & Section" required>
+        <input id="studin5" name="email" type="email" class="form-control" placeholder="Email" required>
+
+
+      </div>
+
+      <!-- second column -->
+      <div class="col">
+        <h6>VIOLATION INFORMATION</h6>
+        <!-- checkbox start -->
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="noid" value="7.5.9" name="vio[]">
+          <label class="form-check-label" for="inlineCheckbox1">NO ID</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="dresscode" value="7.9.10" name="vio[]">
+          <label class="form-check-label" for="inlineCheckbox2">Dress Code</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="smoking" value="7.5.12" name="vio[]">
+          <label class="form-check-label" for="inlineCheckbox3">No Smoking </label>
+        </div>
+        <!-- checkbox end -->
+
+        <textarea class="form-control" name ="details" id="details" rows="4" placeholder=" Please add some specific details about the violation" required></textarea>
+        <label for="validationDefault01">Officer in-charge</label>
+        <select class="form-control" name ="officer" id="oic" placeholder="Officer Name" required>
+          <option value="KIM">Kim</option>
+          <option value="JIMENEZ">Jimenez</option>
+          <option value="CASABUENA">Casabuena</option>
+          <option value="PASAPORTE">Pasaporte</option>
+          <option value="SABROSO">Sabroso</option>
+        </select>
+        <label for="validationDefault01">Date</label>
+        <input type="datetime-local" class="form-control" id="today" placeholder="Date" name="date" required>
+      </div>
+
+
+    </div>
+        <!-- submit start -->
+  <div style="align-content: center; margin-top: 15px;">
+     
+    <input class="btn btn-success btn-block" type="submit" id="button" name =" Submit" value="Submit">
+    <input class="btn btn-danger btn-block" type="submit" id="button" name =" Submit" value="Reset">
+
+
+  </div>
+    <!-- submit end -->
+  </form>
+
+</div>
+
+</body>
+
+</html>
+
