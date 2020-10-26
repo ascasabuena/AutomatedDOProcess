@@ -18,10 +18,6 @@ $(document).ready(function () {
 });
 
 // DATATABLE
-$(document).ready(function() {
-    $('#example').DataTable( {
-        "order": [[ 3, "desc" ]]
-    } );
+$(document).ready( function () {
+    $('#table_id').DataTable();
 } );
-
-
