@@ -9,6 +9,7 @@ document.getElementById("today").value = dateTimezoneTime;*/
 
 $( document ).ready(function() {
     
+    
     $('#studin1').keypress(function(event){
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if(keycode == '13'){
@@ -32,4 +33,7 @@ $( document ).ready(function() {
     
     
 });
+
+
+
 

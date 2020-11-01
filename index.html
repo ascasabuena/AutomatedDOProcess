@@ -26,9 +26,9 @@
   <p >NOTICE TO THE OFFICER IN-CHARGE</p>
   <ol style="margin-top: -20px;">
     <li>The purpose of this notice is to document the student's violation.</li>
-    <li>The student can appeal the violation notice with the D.O within 48 hourss upon issuance, failure to
+    <li>Please inform the student that he/she can appeal the violation notice to the Discipline office within 48 hours upon issuance, failure to
     do so, would mean acceptance of liability.</li>
-    <li>Please confirm the information above.</li>
+    <li>Please confirm the informations below to the student before submitting.</li>
   </ol>
 
   <hr>
@@ -44,6 +44,7 @@
         <input id="studin3" name="lname" type="text" class="form-control" placeholder="Last name" required>
         <input id="studin4" name="course" type="text" class="form-control" placeholder="Course & Section" required>
         <input id="studin5" name="email" type="email" class="form-control" placeholder="Email" required>
+
 
 
       </div>
@@ -64,19 +65,56 @@
           <input class="form-check-input" type="checkbox" id="smoking" value="7.5.12" name="vio[]">
           <label class="form-check-label" for="inlineCheckbox3">No Smoking </label>
         </div>
+
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" onclick="enable()">
+          <label class="form-check-label" for="inlineCheckbox4">Others (Please refer to student handbook for the offense details)</label>
+        </div>  
+        <div class="form-group">
+          <select class="form-control" id="dropdownOthers" disabled="true">
+            <option value=""></option>
+            <option value="">7.4.1 - Endagers life and security </option>
+            <option value="">7.4.2 - Cutting Classes</option>
+            <option value="">7.4.3 - Forgery of school documents</option>
+            <option value="">7.4.4 - Sexual Harassment</option>
+            <option value="">7.4.5 - Sexual advances in words or deeds</option>
+                        <option value="">7.4.6 - Physical assault </option>
+            <option value="">7.4.7 - Vandalism or destruction of school property</option>
+            <option value="">7.4.8 - Possession of firearms</option>
+            <option value="">7.4.9 - Possession, or distribution of prohibited drugs</option>
+            <option value="">7.4.10 -Possession or drinking of alcoholic beverages</option>
+                        <option value="">7.4.11 - Unauthorized use of school belongings</option>
+            <option value="">7.4.12 - Violation of policies regarding the use of school facilities</option>
+            <option value="">7.4.13 - Acts of lewdness</option>
+            <option value="">7.4.14 - Stealing</option>
+            <option value="">7.4.15 - Acts of embezzlement</option>
+                        <option value="">7.4.16 - Gross acts of disrespect, in words or in deeds to the members of APC </option>
+            <option value="">7.4.17 - Acts that tend to destroy the good name of the College</option>
+            <option value="">7.4.18 - Gambling</option>
+            <option value="">7.4.19 - Membership in any fraternity, sorority and gang</option>
+            <option value="">7.4.20 - Intentional insubordination to the faculty member of the college</option>
+          </select>
+        </div>
+
+        
+        
         <!-- checkbox end -->
 
+
+
         <textarea class="form-control" name ="details" id="details" rows="4" placeholder=" Please add some specific details about the violation" required></textarea>
-        <label for="validationDefault01">Officer in-charge</label>
-        <select class="form-control" name ="officer" id="oic" placeholder="Officer Name" required>
-          <option value="KIM">Kim</option>
-          <option value="JIMENEZ">Jimenez</option>
-          <option value="CASABUENA">Casabuena</option>
-          <option value="PASAPORTE">Pasaporte</option>
-          <option value="SABROSO">Sabroso</option>
-        </select>
+
+        <div class="row">
+          <div class="col">
+            <input id="staffid" name="staffid" type="text" class="form-control input-lg" placeholder="Staff ID" required>
+          </div>
+          <div class="col">
+            <input id="staffName" name="staffName" type="text" class="form-control input-lg" placeholder="Staff Name" required>
+          </div>
+        </div>
+
         <label for="validationDefault01">Date</label>
-        <input type="datetime-local" class="form-control" id="today" placeholder="Date" name="date" required>
+        <input type="date" class="form-control" id="today" name="today" required>
       </div>
 
 
@@ -94,7 +132,21 @@
 
 </div>
 
+<script type="text/javascript">
+  let today = new Date().toISOString().substr(0, 10);
+  document.querySelector("#today").value = today;
+  
+</script>
+<script type="text/javascript">
+  function enable() {
+    document.getElementById("dropdownOthers").disabled=false;
+  }
+
+  
+</script>
+
 </body>
+
 
 </html>
 
